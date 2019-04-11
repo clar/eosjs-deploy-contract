@@ -110,18 +110,19 @@ async function buyRam(payer, receiver , bytes) {
 
 (async()=> {
     let user1 = 'mykeyram1234'
-    console.log(await api.rpc.get_account(user1));
+    // console.log(await api.rpc.get_account(user1));
 
     try {
+        // kcleos --print-response set contract hellomykey31 ./test &> response.txt
         console.log(await deployContract({ account: user1, contractDir: `./contract` }));
         
     } catch (error) {
         console.log(`\n${error}\n`);
     }
-    console.log(await buyRam(user1, user1, 1024));
-    console.log(``);
+    // console.log(await buyRam(user1, user1, 1024));
+    // console.log(``);
 
-    console.log(await api.rpc.get_account(user1));
+    // console.log(await api.rpc.get_account(user1));
 
 
 })()
